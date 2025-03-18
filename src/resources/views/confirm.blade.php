@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 </head>
 
 <body>
@@ -20,12 +20,12 @@
     </header>
 
     <main>
-        <?php print_r($contact) ?>
         <div class="confirm__content">
-            <div class="confirm-heading">
+            <div class="confirm__heading">
                 <h2>お問い合わせ内容確認</h2>
             </div>
-            <form action="" class="form">
+            <form action="/contacts" method="post" class="form">
+                @csrf
                 <div class="confirm-table">
                     <table class="confirm-table__inner">
                         <tr class="confirm-table__row">
